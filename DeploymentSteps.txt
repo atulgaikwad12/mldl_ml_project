@@ -1,0 +1,38 @@
+Deployment in azure
+
+1. Download code from #https://github.com/Avnish327030/mldl_ml_project/
+
+2. Open in pycharm add new interpreter with conda new env python version 3.7
+3. open terminal pip install -r requirements.txt
+4. python project_library_layer\initializer\setup_configuration.py
+
+5. Delete exusiting .github folder now check with command ->git status
+no git repo.... msg should come
+
+5. Create new repository in git hub
+will get below commands
+
+echo "# mldl_ml_project" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/atulgaikwad12/mldl_ml_project.git
+git push -u origin main 
+
+6. open azure portal search for app services
+7. choose subscription select resouce group/create new resource grp
+give web app name
+in publish select Docker container 
+OS Linux
+Region Central US
+
+8. in Docker tab, give image name keep access public 
+9. in Tag tab provide Name, Value
+10. Validate and create app service
+11. Go to Deployment center 
+
+Choose source -> Github Actions: Build , Deploy ...
+Github Actions -> Add github account 
+select Git Repo, Branch 
+ 
